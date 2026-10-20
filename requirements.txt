@@ -1,0 +1,7 @@
+# serving; torch is installed separately in the Dockerfile from the CPU-only index
+fastapi==0.156.1
+uvicorn[standard]==0.54.0
+pydantic-settings==2.16.1
+prometheus-client==0.26.0
+transformers==5.20.2
+safetensors==0.8.0

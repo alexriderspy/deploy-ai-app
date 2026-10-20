@@ -1,0 +1,5 @@
+sreemanti@MacBook-Pro deploy-ai-app % python -m scripts.try_schemas
+title='Engine crashes with CUDA OOM on 4 GPUs' body=''
+rejected: 'title': String should have at least 1 character
+rejected: 'title': Field required
+rejected: 'title': String should have at most 300 characters

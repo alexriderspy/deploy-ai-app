@@ -1,0 +1,22 @@
+sreemanti@MacBook-Pro deploy-ai-app % python -m scripts.show_settings
+weights_dir        'model'
+model_version      'issue-triage-llama-3.2-1b-v1'
+device             'auto'
+dtype              'bfloat16'
+api_keys           SecretStr('**********')
+max_batch_size     8
+max_wait_ms        10
+max_queue          64
+request_timeout_s  30.0
+log_level          'INFO'
+sreemanti@MacBook-Pro deploy-ai-app % env MAX_BATCH_SIZE=4 python -m scripts.show_settings
+weights_dir        'model'
+model_version      'issue-triage-llama-3.2-1b-v1'
+device             'auto'
+dtype              'bfloat16'
+api_keys           SecretStr('**********')
+max_batch_size     4
+max_wait_ms        10
+max_queue          64
+request_timeout_s  30.0
+log_level          'INFO'

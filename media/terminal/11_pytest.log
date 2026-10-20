@@ -1,0 +1,5 @@
+sreemanti@MacBook-Pro deploy-ai-app % python -m pytest -v --no-header
+============================= test session starts ==============================
+collecting ... collected 8 items
+
+tests/test_api.py::test_health PASSED

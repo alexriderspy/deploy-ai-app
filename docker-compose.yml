@@ -1,0 +1,23 @@
+services:
+  api:
+    build: .
+    image: deploy-ai-app:local
+    env_file: .env
+    ports:
+      - "${API_PORT:-8080}:8080"
+    volumes:
+      - ./model:/models/issue-triage:ro      # the weights stay outside the image
+    deploy:
+      resources:
+        limits: {cpus: "4", memory: 6g}
+    restart: unless-stopped
+
+  prometheus:
+    image: prom/prometheus:v3.5.0
+    volumes:
+      - ./deploy/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    ports:
+      - "${PROM_PORT:-9090}:9090"
+    depends_on:
+      api:
+        condition: service_healthy

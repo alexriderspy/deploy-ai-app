@@ -1,0 +1,8 @@
+sreemanti@MacBook-Pro deploy-ai-app % python -m pytest tests/test_batcher.py -v --no-header
+============================= test session starts ==============================
+collecting ... collected 2 items
+
+tests/test_batcher.py::test_requests_that_arrive_together_share_a_batch PASSED [ 50%]
+tests/test_batcher.py::test_full_queue_is_refused_right_away PASSED      [100%]
+
+============================== 2 passed in 0.06s ===============================
