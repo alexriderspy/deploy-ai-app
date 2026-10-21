@@ -1,0 +1,22 @@
+sreemanti@MacBook-Pro deploy-ai-app % gh run view 39540543306
+
+✓ main ci · 39540543306
+Triggered via push about 2 minutes ago
+
+JOBS
+✓ test in 30s (ID 119027019497)
+✓ image in 2m7s (ID 119027176519)
+
+ANNOTATIONS
+- "The ubuntu-latest label will migrate to Ubuntu 26 beginning October 19, 2026. For more information, see https://github.com/actions/runner-images/issues/14748"
+test: .github#1
+
+- "The ubuntu-latest label will migrate to Ubuntu 26 beginning October 19, 2026. For more information, see https://github.com/actions/runner-images/issues/14748"
+image: .github#1
+
+
+ARTIFACTS
+alexriderspy~deploy-ai-app~UL1H7M.dockerbuild
+
+For more information about a job, try: gh run view --job=<job-id>
+View this run on GitHub: https://github.com/alexriderspy/deploy-ai-app/actions/runs/39540543306
