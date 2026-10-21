@@ -6,6 +6,9 @@ from pathlib import Path
 import torch
 from peft import PeftModel
 from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers.utils import logging as hf_logging
+
+hf_logging.disable_progress_bar()
 
 adapter, out = Path(sys.argv[1]), Path(sys.argv[2])
 base_id = json.loads((adapter / "adapter_config.json").read_text())["base_model_name_or_path"]

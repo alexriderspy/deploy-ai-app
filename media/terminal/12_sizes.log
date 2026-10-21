@@ -1,0 +1,4 @@
+sreemanti@MacBook-Pro deploy-ai-app % docker images deploy-ai-app
+IMAGE                   ID             DISK USAGE   CONTENT SIZE   EXTRA
+deploy-ai-app:builder   06c2f1dcb610       1.62GB          337MB        
+deploy-ai-app:local     2e5a94882bbd       1.54GB          330MB        

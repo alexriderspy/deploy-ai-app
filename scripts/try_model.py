@@ -9,7 +9,7 @@ started = time.perf_counter()
 clf = IssueClassifier(settings.weights_dir, settings.device, settings.dtype)
 print(f"loaded on {clf.device} in {time.perf_counter() - started:.1f} s")
 
-issues = [json.loads(line) for line in open("data/test_issues.jsonl")][:8]
+issues = [json.loads(line) for line in open("data/test_issues.jsonl")][::35]   # 8 issues, every label
 pairs = [(row["title"], row["body"]) for row in issues]
 clf.predict(pairs[:1])                                    # warm-up: the first call is always slower
 

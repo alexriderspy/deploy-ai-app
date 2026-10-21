@@ -1,0 +1,269 @@
+sreemanti@MacBook-Pro deploy-ai-app % docker build -t deploy-ai-app:local .
+#0 building with "colima-deploy" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.32kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 2.9s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 148B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 14.69kB done
+#4 DONE 0.0s
+
+#5 [builder 1/6] FROM docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+#5 resolve docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1 0.0s done
+#5 sha256:6e2fcafe72a4c4e812d11805d3f8f7b8fddd43ac39a29aadbe0a93b079d60e18 0B / 249B 0.0s
+#5 sha256:6e2fcafe72a4c4e812d11805d3f8f7b8fddd43ac39a29aadbe0a93b079d60e18 249B / 249B 0.1s done
+#5 sha256:387b25ff7b944c188f58f0e8633fb93428b7418b9af0549618f96ce8fd56da5f 0B / 1.28MB 0.0s
+#5 sha256:4dbdca1a513d31094476a7f745c8278b0ca94c30b9bc66ec65b9faebff263a16 0B / 12.06MB 0.0s
+#5 sha256:bbeda6b4abb749f743f4547ef5a28070a14de8caef211daa5afb78d5b5fa21ba 0B / 30.20MB 0.0s
+#5 sha256:387b25ff7b944c188f58f0e8633fb93428b7418b9af0549618f96ce8fd56da5f 1.28MB / 1.28MB 0.4s done
+#5 sha256:4dbdca1a513d31094476a7f745c8278b0ca94c30b9bc66ec65b9faebff263a16 1.05MB / 12.06MB 0.8s
+#5 sha256:4dbdca1a513d31094476a7f745c8278b0ca94c30b9bc66ec65b9faebff263a16 3.15MB / 12.06MB 0.9s
+#5 sha256:bbeda6b4abb749f743f4547ef5a28070a14de8caef211daa5afb78d5b5fa21ba 9.44MB / 30.20MB 0.8s
+#5 sha256:4dbdca1a513d31094476a7f745c8278b0ca94c30b9bc66ec65b9faebff263a16 4.19MB / 12.06MB 1.1s
+#5 sha256:bbeda6b4abb749f743f4547ef5a28070a14de8caef211daa5afb78d5b5fa21ba 16.78MB / 30.20MB 1.1s
+#5 sha256:4dbdca1a513d31094476a7f745c8278b0ca94c30b9bc66ec65b9faebff263a16 6.29MB / 12.06MB 1.2s
+#5 sha256:4dbdca1a513d31094476a7f745c8278b0ca94c30b9bc66ec65b9faebff263a16 7.34MB / 12.06MB 1.4s
+#5 sha256:4dbdca1a513d31094476a7f745c8278b0ca94c30b9bc66ec65b9faebff263a16 8.39MB / 12.06MB 1.5s
+#5 sha256:bbeda6b4abb749f743f4547ef5a28070a14de8caef211daa5afb78d5b5fa21ba 19.92MB / 30.20MB 1.5s
+#5 sha256:4dbdca1a513d31094476a7f745c8278b0ca94c30b9bc66ec65b9faebff263a16 9.44MB / 12.06MB 1.7s
+#5 sha256:4dbdca1a513d31094476a7f745c8278b0ca94c30b9bc66ec65b9faebff263a16 10.49MB / 12.06MB 1.8s
+#5 sha256:4dbdca1a513d31094476a7f745c8278b0ca94c30b9bc66ec65b9faebff263a16 12.06MB / 12.06MB 2.0s done
+#5 sha256:bbeda6b4abb749f743f4547ef5a28070a14de8caef211daa5afb78d5b5fa21ba 22.02MB / 30.20MB 1.8s
+#5 sha256:bbeda6b4abb749f743f4547ef5a28070a14de8caef211daa5afb78d5b5fa21ba 24.12MB / 30.20MB 2.1s
+#5 sha256:bbeda6b4abb749f743f4547ef5a28070a14de8caef211daa5afb78d5b5fa21ba 27.26MB / 30.20MB 2.4s
+#5 sha256:bbeda6b4abb749f743f4547ef5a28070a14de8caef211daa5afb78d5b5fa21ba 30.20MB / 30.20MB 2.5s done
+#5 extracting sha256:bbeda6b4abb749f743f4547ef5a28070a14de8caef211daa5afb78d5b5fa21ba
+#5 extracting sha256:bbeda6b4abb749f743f4547ef5a28070a14de8caef211daa5afb78d5b5fa21ba 0.4s done
+#5 DONE 2.9s
+
+#5 [builder 1/6] FROM docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+#5 extracting sha256:387b25ff7b944c188f58f0e8633fb93428b7418b9af0549618f96ce8fd56da5f 0.0s done
+#5 extracting sha256:4dbdca1a513d31094476a7f745c8278b0ca94c30b9bc66ec65b9faebff263a16 0.1s done
+#5 DONE 3.1s
+
+#5 [builder 1/6] FROM docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+#5 extracting sha256:6e2fcafe72a4c4e812d11805d3f8f7b8fddd43ac39a29aadbe0a93b079d60e18 done
+#5 DONE 3.1s
+
+#6 [builder 2/6] RUN python -m venv /opt/venv
+#6 ...
+
+#7 [stage-1 2/5] RUN useradd --create-home --uid 10001 app
+#7 DONE 0.3s
+
+#6 [builder 2/6] RUN python -m venv /opt/venv
+#6 DONE 1.6s
+
+#8 [builder 3/6] RUN pip install torch==2.14.1 --index-url https://download.pytorch.org/whl/cpu
+#8 0.206 Looking in indexes: https://download.pytorch.org/whl/cpu
+#8 0.456 Collecting torch==2.14.1
+#8 0.683   Downloading https://download-r2.pytorch.org/whl/cpu/torch-2.14.1%2Bcpu-cp312-cp312-manylinux_2_28_aarch64.whl.metadata (37 kB)
+#8 0.836 Collecting filelock (from torch==2.14.1)
+#8 1.000   Downloading filelock-3.32.3-py3-none-any.whl.metadata (2.0 kB)
+#8 1.055 Collecting typing-extensions>=4.10.0 (from torch==2.14.1)
+#8 1.063   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+#8 1.110 Collecting setuptools>=77.0.3 (from torch==2.14.1)
+#8 1.119   Downloading https://download.pytorch.org/whl/setuptools-78.1.0-py3-none-any.whl.metadata (6.6 kB)
+#8 1.169 Collecting sympy>=1.13.3 (from torch==2.14.1)
+#8 1.174   Downloading sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+#8 1.228 Collecting networkx>=2.5.1 (from torch==2.14.1)
+#8 1.235   Downloading networkx-3.6.1-py3-none-any.whl.metadata (6.8 kB)
+#8 1.291 Collecting jinja2 (from torch==2.14.1)
+#8 1.299   Downloading https://download.pytorch.org/whl/jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#8 1.374 Collecting fsspec>=0.8.5 (from torch==2.14.1)
+#8 1.380   Downloading fsspec-2026.7.0-py3-none-any.whl.metadata (10 kB)
+#8 1.448 Collecting mpmath<1.4,>=1.1.0 (from sympy>=1.13.3->torch==2.14.1)
+#8 1.455   Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+#8 1.510 Collecting MarkupSafe>=2.0 (from jinja2->torch==2.14.1)
+#8 1.516   Downloading https://download.pytorch.org/whl/markupsafe-3.0.3-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (2.7 kB)
+#8 1.567 Downloading https://download-r2.pytorch.org/whl/cpu/torch-2.14.1%2Bcpu-cp312-cp312-manylinux_2_28_aarch64.whl (159.2 MB)
+#8 10.99    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 159.2/159.2 MB 17.0 MB/s eta 0:00:00
+#8 11.00 Downloading fsspec-2026.7.0-py3-none-any.whl (206 kB)
+#8 11.02 Downloading networkx-3.6.1-py3-none-any.whl (2.1 MB)
+#8 11.12    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 19.6 MB/s eta 0:00:00
+#8 11.14 Downloading https://download.pytorch.org/whl/setuptools-78.1.0-py3-none-any.whl (1.3 MB)
+#8 11.19    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 19.0 MB/s eta 0:00:00
+#8 11.20 Downloading sympy-1.14.0-py3-none-any.whl (6.3 MB)
+#8 11.69    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 12.5 MB/s eta 0:00:00
+#8 11.70 Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+#8 11.72 Downloading filelock-3.32.3-py3-none-any.whl (98 kB)
+#8 11.73 Downloading https://download.pytorch.org/whl/jinja2-3.1.6-py3-none-any.whl (134 kB)
+#8 11.74 Downloading https://download.pytorch.org/whl/markupsafe-3.0.3-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (24 kB)
+#8 11.75 Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+#8 11.79    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 15.1 MB/s eta 0:00:00
+#8 11.98 Installing collected packages: mpmath, typing-extensions, sympy, setuptools, networkx, MarkupSafe, fsspec, filelock, jinja2, torch
+#8 22.35 Successfully installed MarkupSafe-3.0.3 filelock-3.32.3 fsspec-2026.7.0 jinja2-3.1.6 mpmath-1.3.0 networkx-3.6.1 setuptools-78.1.0 sympy-1.14.0 torch-2.14.1+cpu typing-extensions-4.16.0
+#8 DONE 22.5s
+
+#9 [builder 4/6] COPY requirements.txt .
+#9 DONE 0.1s
+
+#10 [builder 5/6] RUN pip install -r requirements.txt
+#10 0.297 Collecting fastapi==0.156.1 (from -r requirements.txt (line 2))
+#10 0.328   Downloading fastapi-0.156.1-py3-none-any.whl.metadata (26 kB)
+#10 0.349 Collecting uvicorn==0.54.0 (from uvicorn[standard]==0.54.0->-r requirements.txt (line 3))
+#10 0.356   Downloading uvicorn-0.54.0-py3-none-any.whl.metadata (6.6 kB)
+#10 0.367 Collecting pydantic-settings==2.16.1 (from -r requirements.txt (line 4))
+#10 0.373   Downloading pydantic_settings-2.16.1-py3-none-any.whl.metadata (4.0 kB)
+#10 0.384 Collecting prometheus-client==0.26.0 (from -r requirements.txt (line 5))
+#10 0.390   Downloading prometheus_client-0.26.0-py3-none-any.whl.metadata (2.1 kB)
+#10 0.420 Collecting transformers==5.20.2 (from -r requirements.txt (line 6))
+#10 0.428   Downloading transformers-5.20.2-py3-none-any.whl.metadata (31 kB)
+#10 0.511 Collecting safetensors==0.8.0 (from -r requirements.txt (line 7))
+#10 0.519   Downloading safetensors-0.8.0-cp310-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (4.2 kB)
+#10 0.538 Collecting starlette>=0.46.0 (from fastapi==0.156.1->-r requirements.txt (line 2))
+#10 0.544   Downloading starlette-1.9.0-py3-none-any.whl.metadata (6.6 kB)
+#10 0.592 Collecting pydantic>=2.9.0 (from fastapi==0.156.1->-r requirements.txt (line 2))
+#10 0.599   Downloading pydantic-2.14.1-py3-none-any.whl.metadata (133 kB)
+#10 0.608 Requirement already satisfied: typing-extensions>=4.8.0 in /opt/venv/lib/python3.12/site-packages (from fastapi==0.156.1->-r requirements.txt (line 2)) (4.16.0)
+#10 0.616 Collecting typing-inspection>=0.4.2 (from fastapi==0.156.1->-r requirements.txt (line 2))
+#10 0.622   Downloading typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+#10 0.632 Collecting annotated-doc>=0.0.2 (from fastapi==0.156.1->-r requirements.txt (line 2))
+#10 0.638   Downloading annotated_doc-0.0.5-py3-none-any.whl.metadata (6.5 kB)
+#10 0.652 Collecting opentelemetry-api>=1.44.0 (from fastapi==0.156.1->-r requirements.txt (line 2))
+#10 0.658   Downloading opentelemetry_api-1.45.1-py3-none-any.whl.metadata (1.4 kB)
+#10 0.672 Collecting click>=7.0 (from uvicorn==0.54.0->uvicorn[standard]==0.54.0->-r requirements.txt (line 3))
+#10 0.676   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+#10 0.683 Collecting h11>=0.8 (from uvicorn==0.54.0->uvicorn[standard]==0.54.0->-r requirements.txt (line 3))
+#10 0.689   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+#10 0.706 Collecting python-dotenv>=1.2.2 (from pydantic-settings==2.16.1->-r requirements.txt (line 4))
+#10 0.713   Downloading python_dotenv-1.2.4-py3-none-any.whl.metadata (29 kB)
+#10 0.744 Collecting huggingface-hub<3.0,>=1.31.0 (from transformers==5.20.2->-r requirements.txt (line 6))
+#10 0.751   Downloading huggingface_hub-2.2.0-py3-none-any.whl.metadata (16 kB)
+#10 0.839 Collecting numpy>=1.17 (from transformers==5.20.2->-r requirements.txt (line 6))
+#10 0.847   Downloading numpy-2.5.4-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl.metadata (6.6 kB)
+#10 0.858 Collecting packaging>=20.0 (from transformers==5.20.2->-r requirements.txt (line 6))
+#10 0.862   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+#10 0.880 Collecting pyyaml>=5.1 (from transformers==5.20.2->-r requirements.txt (line 6))
+#10 0.886   Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (2.4 kB)
+#10 1.042 Collecting regex>=2025.10.22 (from transformers==5.20.2->-r requirements.txt (line 6))
+#10 1.050   Downloading regex-2026.9.29-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (40 kB)
+#10 1.105 Collecting tokenizers<0.24.0,>=0.23.1 (from transformers==5.20.2->-r requirements.txt (line 6))
+#10 1.112   Downloading tokenizers-0.23.3-cp310-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (9.8 kB)
+#10 1.125 Collecting typer (from transformers==5.20.2->-r requirements.txt (line 6))
+#10 1.129   Downloading typer-0.27.3-py3-none-any.whl.metadata (16 kB)
+#10 1.149 Collecting tqdm>=4.60 (from transformers==5.20.2->-r requirements.txt (line 6))
+#10 1.156   Downloading tqdm-4.70.1-py3-none-any.whl.metadata (57 kB)
+#10 1.176 Collecting httptools>=0.8.0 (from uvicorn[standard]==0.54.0->-r requirements.txt (line 3))
+#10 1.182   Downloading httptools-0.9.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (3.5 kB)
+#10 1.203 Collecting uvloop>=0.15.1 (from uvicorn[standard]==0.54.0->-r requirements.txt (line 3))
+#10 1.210   Downloading uvloop-0.23.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (5.1 kB)
+#10 1.253 Collecting watchfiles>=0.20 (from uvicorn[standard]==0.54.0->-r requirements.txt (line 3))
+#10 1.261   Downloading watchfiles-1.3.0-cp310-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (4.9 kB)
+#10 1.312 Collecting websockets>=13.0 (from uvicorn[standard]==0.54.0->-r requirements.txt (line 3))
+#10 1.319   Downloading websockets-17.3-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (6.3 kB)
+#10 1.323 Requirement already satisfied: filelock>=3.10.0 in /opt/venv/lib/python3.12/site-packages (from huggingface-hub<3.0,>=1.31.0->transformers==5.20.2->-r requirements.txt (line 6)) (3.32.3)
+#10 1.323 Requirement already satisfied: fsspec>=2023.5.0 in /opt/venv/lib/python3.12/site-packages (from huggingface-hub<3.0,>=1.31.0->transformers==5.20.2->-r requirements.txt (line 6)) (2026.7.0)
+#10 1.344 Collecting hf-xet<2.0.0,>=1.6.0 (from huggingface-hub<3.0,>=1.31.0->transformers==5.20.2->-r requirements.txt (line 6))
+#10 1.351   Downloading hf_xet-1.7.0-cp38-abi3-manylinux_2_28_aarch64.whl.metadata (4.9 kB)
+#10 1.360 Collecting httpx2<3,>=2.0.0 (from huggingface-hub<3.0,>=1.31.0->transformers==5.20.2->-r requirements.txt (line 6))
+#10 1.367   Downloading httpx2-2.15.1-py3-none-any.whl.metadata (9.6 kB)
+#10 1.385 Collecting annotated-types>=0.6.0 (from pydantic>=2.9.0->fastapi==0.156.1->-r requirements.txt (line 2))
+#10 1.391   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+#10 1.684 Collecting pydantic-core==2.50.1 (from pydantic>=2.9.0->fastapi==0.156.1->-r requirements.txt (line 2))
+#10 1.693   Downloading pydantic_core-2.50.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (6.5 kB)
+#10 1.710 Collecting anyio<5,>=4.0.0 (from starlette>=0.46.0->fastapi==0.156.1->-r requirements.txt (line 2))
+#10 1.717   Downloading anyio-4.15.1-py3-none-any.whl.metadata (4.7 kB)
+#10 1.742 Collecting shellingham>=1.3.0 (from typer->transformers==5.20.2->-r requirements.txt (line 6))
+#10 1.748   Downloading shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)
+#10 1.766 Collecting rich>=13.8.0 (from typer->transformers==5.20.2->-r requirements.txt (line 6))
+#10 1.773   Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+#10 1.785 Collecting idna>=2.8 (from anyio<5,>=4.0.0->starlette>=0.46.0->fastapi==0.156.1->-r requirements.txt (line 2))
+#10 1.792   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+#10 1.809 Collecting httpcore2==2.15.1 (from httpx2<3,>=2.0.0->huggingface-hub<3.0,>=1.31.0->transformers==5.20.2->-r requirements.txt (line 6))
+#10 1.815   Downloading httpcore2-2.15.1-py3-none-any.whl.metadata (27 kB)
+#10 1.826 Collecting truststore>=0.10 (from httpx2<3,>=2.0.0->huggingface-hub<3.0,>=1.31.0->transformers==5.20.2->-r requirements.txt (line 6))
+#10 1.831   Downloading truststore-0.10.5-py3-none-any.whl.metadata (4.5 kB)
+#10 1.843 Collecting markdown-it-py>=2.2.0 (from rich>=13.8.0->typer->transformers==5.20.2->-r requirements.txt (line 6))
+#10 1.854   Downloading markdown_it_py-4.2.0-py3-none-any.whl.metadata (7.4 kB)
+#10 1.871 Collecting pygments<3.0.0,>=2.13.0 (from rich>=13.8.0->typer->transformers==5.20.2->-r requirements.txt (line 6))
+#10 1.876   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+#10 1.885 Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=13.8.0->typer->transformers==5.20.2->-r requirements.txt (line 6))
+#10 1.890   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+#10 1.900 Downloading fastapi-0.156.1-py3-none-any.whl (146 kB)
+#10 1.909 Downloading uvicorn-0.54.0-py3-none-any.whl (87 kB)
+#10 1.917 Downloading pydantic_settings-2.16.1-py3-none-any.whl (80 kB)
+#10 1.924 Downloading prometheus_client-0.26.0-py3-none-any.whl (64 kB)
+#10 1.934 Downloading transformers-5.20.2-py3-none-any.whl (12.8 MB)
+#10 2.187    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 58.8 MB/s eta 0:00:00
+#10 2.193 Downloading safetensors-0.8.0-cp310-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (502 kB)
+#10 2.210 Downloading annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+#10 2.216 Downloading click-8.5.0-py3-none-any.whl (125 kB)
+#10 2.224 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+#10 2.232 Downloading httptools-0.9.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (549 kB)
+#10 2.244    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 549.2/549.2 kB 99.4 MB/s eta 0:00:00
+#10 2.251 Downloading huggingface_hub-2.2.0-py3-none-any.whl (839 kB)
+#10 2.265    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 839.9/839.9 kB 76.9 MB/s eta 0:00:00
+#10 2.283 Downloading numpy-2.5.4-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl (15.7 MB)
+#10 2.991    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.7/15.7 MB 22.0 MB/s eta 0:00:00
+#10 3.002 Downloading opentelemetry_api-1.45.1-py3-none-any.whl (60 kB)
+#10 3.013 Downloading packaging-26.3-py3-none-any.whl (129 kB)
+#10 3.048 Downloading pydantic-2.14.1-py3-none-any.whl (488 kB)
+#10 3.092 Downloading pydantic_core-2.50.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (2.0 MB)
+#10 3.222    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 16.0 MB/s eta 0:00:00
+#10 3.231 Downloading python_dotenv-1.2.4-py3-none-any.whl (23 kB)
+#10 3.240 Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (775 kB)
+#10 3.286    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 775.1/775.1 kB 18.5 MB/s eta 0:00:00
+#10 3.296 Downloading regex-2026.9.29-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (805 kB)
+#10 3.342    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 805.9/805.9 kB 17.9 MB/s eta 0:00:00
+#10 3.349 Downloading starlette-1.9.0-py3-none-any.whl (80 kB)
+#10 3.361 Downloading tokenizers-0.23.3-cp310-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (3.5 MB)
+#10 3.531    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.5/3.5 MB 21.1 MB/s eta 0:00:00
+#10 3.542 Downloading tqdm-4.70.1-py3-none-any.whl (80 kB)
+#10 3.551 Downloading typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+#10 3.557 Downloading uvloop-0.23.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (4.4 MB)
+#10 3.767    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.4/4.4 MB 21.6 MB/s eta 0:00:00
+#10 3.779 Downloading watchfiles-1.3.0-cp310-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (454 kB)
+#10 3.821 Downloading websockets-17.3-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (227 kB)
+#10 3.844 Downloading typer-0.27.3-py3-none-any.whl (123 kB)
+#10 3.858 Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+#10 3.869 Downloading anyio-4.15.1-py3-none-any.whl (132 kB)
+#10 3.885 Downloading hf_xet-1.7.0-cp38-abi3-manylinux_2_28_aarch64.whl (4.0 MB)
+#10 4.118    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.0/4.0 MB 17.4 MB/s eta 0:00:00
+#10 4.129 Downloading httpx2-2.15.1-py3-none-any.whl (96 kB)
+#10 4.137 Downloading httpcore2-2.15.1-py3-none-any.whl (85 kB)
+#10 4.150 Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+#10 4.172 Downloading shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+#10 4.180 Downloading idna-3.20-py3-none-any.whl (69 kB)
+#10 4.188 Downloading markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+#10 4.202 Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+#10 4.263    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 21.7 MB/s eta 0:00:00
+#10 4.271 Downloading truststore-0.10.5-py3-none-any.whl (19 kB)
+#10 4.279 Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+#10 4.393 Installing collected packages: websockets, uvloop, typing-inspection, truststore, tqdm, shellingham, safetensors, regex, pyyaml, python-dotenv, pygments, pydantic-core, prometheus-client, packaging, opentelemetry-api, numpy, mdurl, idna, httptools, hf-xet, h11, click, annotated-types, annotated-doc, uvicorn, pydantic, markdown-it-py, httpcore2, anyio, watchfiles, starlette, rich, pydantic-settings, httpx2, typer, huggingface-hub, fastapi, tokenizers, transformers
+#10 10.75 Successfully installed annotated-doc-0.0.5 annotated-types-0.8.0 anyio-4.15.1 click-8.5.0 fastapi-0.156.1 h11-0.16.0 hf-xet-1.7.0 httpcore2-2.15.1 httptools-0.9.0 httpx2-2.15.1 huggingface-hub-2.2.0 idna-3.20 markdown-it-py-4.2.0 mdurl-0.1.2 numpy-2.5.4 opentelemetry-api-1.45.1 packaging-26.3 prometheus-client-0.26.0 pydantic-2.14.1 pydantic-core-2.50.1 pydantic-settings-2.16.1 pygments-2.21.0 python-dotenv-1.2.4 pyyaml-6.0.3 regex-2026.9.29 rich-15.0.0 safetensors-0.8.0 shellingham-1.5.4 starlette-1.9.0 tokenizers-0.23.3 tqdm-4.70.1 transformers-5.20.2 truststore-0.10.5 typer-0.27.3 typing-inspection-0.4.4 uvicorn-0.54.0 uvloop-0.23.0 watchfiles-1.3.0 websockets-17.3
+#10 DONE 10.9s
+
+#11 [builder 6/6] RUN rm -rf /opt/venv/lib/python3.12/site-packages/torch/include
+#11 DONE 0.3s
+
+#12 [stage-1 3/5] COPY --from=builder /opt/venv /opt/venv
+#12 DONE 1.2s
+
+#13 [stage-1 4/5] WORKDIR /srv
+#13 DONE 0.1s
+
+#14 [stage-1 5/5] COPY app ./app
+#14 DONE 0.0s
+
+#15 exporting to image
+#15 exporting layers
+#15 exporting layers 17.9s done
+#15 exporting manifest sha256:e2aa53c5686713cbeeb27e3e9bb0a37e04c9e045c48b964ad7644ec4188d99ef done
+#15 exporting config sha256:f2109d3752e3a1d86eaa13469aade2eb7507e7d324ffce4fbb790809469b7df0 done
+#15 exporting attestation manifest sha256:f7b2ca39dbc916ff0139674b713167665b90031ce4b1e582f103de8acca98654 done
+#15 exporting manifest list sha256:7cda0e4d8b784af29dbbfdeac5d907a0da059ca7e34d891ce139642ed9d8b0bc done
+#15 naming to docker.io/library/deploy-ai-app:local done
+#15 unpacking to docker.io/library/deploy-ai-app:local
+#15 unpacking to docker.io/library/deploy-ai-app:local 3.3s done
+#15 DONE 21.2s
+
+View build details: docker-desktop://dashboard/build/colima-deploy/colima-deploy/at4z5ro03zfhhtaq5abpbjbb2

@@ -1,0 +1,36 @@
+sreemanti@MacBook-Pro deploy-ai-app % curl -s -i --json @data/example_issue.json localhost:54588/predict
+HTTP/1.1 401 Unauthorized
+date: Wed, 21 Oct 2026 03:47:16 GMT
+server: uvicorn
+content-length: 41
+content-type: application/json
+x-request-id: 96a527e28c90
+
+{"detail":"missing or invalid X-API-Key"}
+sreemanti@MacBook-Pro deploy-ai-app % curl -s -i -H X-API-Key:guess --json @data/example_issue.json localhost:54588/predict
+HTTP/1.1 401 Unauthorized
+date: Wed, 21 Oct 2026 03:47:16 GMT
+server: uvicorn
+content-length: 41
+content-type: application/json
+x-request-id: bc52bd90f0d1
+
+{"detail":"missing or invalid X-API-Key"}
+sreemanti@MacBook-Pro deploy-ai-app % curl -s -i -H X-API-Key:local-demo-key --json @data/bad_issue.json localhost:54588/predict
+HTTP/1.1 422 Unprocessable Entity
+date: Wed, 21 Oct 2026 03:47:16 GMT
+server: uvicorn
+content-length: 145
+content-type: application/json
+x-request-id: 3cc3deb3770b
+
+{"detail":[{"type":"string_too_short","loc":["body","title"],"msg":"String should have at least 1 character","input":"","ctx":{"min_length":1}}]}
+sreemanti@MacBook-Pro deploy-ai-app % curl -s -i -H X-API-Key:local-demo-key --json {} localhost:54588/predict
+HTTP/1.1 422 Unprocessable Entity
+date: Wed, 21 Oct 2026 03:47:16 GMT
+server: uvicorn
+content-length: 88
+content-type: application/json
+x-request-id: df5c98dc6a56
+
+{"detail":[{"type":"missing","loc":["body","title"],"msg":"Field required","input":{}}]}

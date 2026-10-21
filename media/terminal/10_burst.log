@@ -1,0 +1,3 @@
+sreemanti@MacBook-Pro deploy-ai-app % python scripts/load_test.py --url http://localhost:54588 -n 32 -c 1 8
+concurrency  1 | 32 requests: 200x32 |  5.61 ok/s | p50    175 ms  p95    196 ms  max    196 ms
+concurrency  8 | 32 requests: 200x32 |  8.10 ok/s | p50    981 ms  p95   1027 ms  max   1027 ms

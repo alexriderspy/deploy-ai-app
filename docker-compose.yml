@@ -1,15 +1,19 @@
+name: deploy-ai-app
+
 services:
   api:
     build: .
     image: deploy-ai-app:local
     env_file: .env
+    environment:
+      DTYPE: float16                         # fastest on my Mac's ARM CPU; measure on yours
     ports:
       - "${API_PORT:-8080}:8080"
     volumes:
       - ./model:/models/issue-triage:ro      # the weights stay outside the image
     deploy:
       resources:
-        limits: {cpus: "4", memory: 6g}
+        limits: {cpus: "4", memory: 5g}
     restart: unless-stopped
 
   prometheus:

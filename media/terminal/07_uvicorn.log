@@ -1,0 +1,81 @@
+sreemanti@MacBook-Pro deploy-ai-app % uvicorn app.main:app --port 54588 --no-access-log
+INFO:     Started server process [22740]
+INFO:     Waiting for application startup.
+W1021 09:17:13.439000 22740 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+{"time": "2026-10-21T03:47:15.690+00:00", "severity": "INFO", "message": "model loaded", "seconds": 5.3, "device": "mps", "max_batch_size": 8, "auth": true}
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:54588 (Press CTRL+C to quit)
+{"time": "2026-10-21T03:47:16.845+00:00", "severity": "INFO", "message": "request", "request_id": "3443c5eab9da", "method": "POST", "path": "/predict", "status": 200, "ms": 643.6}
+{"time": "2026-10-21T03:47:17.005+00:00", "severity": "INFO", "message": "request", "request_id": "ec105fc9a50e", "method": "POST", "path": "/predict", "status": 200, "ms": 149.3}
+{"time": "2026-10-21T03:47:17.022+00:00", "severity": "INFO", "message": "request", "request_id": "96a527e28c90", "method": "POST", "path": "/predict", "status": 401, "ms": 0.5}
+{"time": "2026-10-21T03:47:17.033+00:00", "severity": "INFO", "message": "request", "request_id": "bc52bd90f0d1", "method": "POST", "path": "/predict", "status": 401, "ms": 0.4}
+{"time": "2026-10-21T03:47:17.045+00:00", "severity": "INFO", "message": "request", "request_id": "3cc3deb3770b", "method": "POST", "path": "/predict", "status": 422, "ms": 0.7}
+{"time": "2026-10-21T03:47:17.056+00:00", "severity": "INFO", "message": "request", "request_id": "df5c98dc6a56", "method": "POST", "path": "/predict", "status": 422, "ms": 0.6}
+{"time": "2026-10-21T03:47:17.416+00:00", "severity": "INFO", "message": "request", "request_id": "c709a7768488", "method": "POST", "path": "/predict", "status": 200, "ms": 176.8}
+{"time": "2026-10-21T03:47:17.593+00:00", "severity": "INFO", "message": "request", "request_id": "002d579ad971", "method": "POST", "path": "/predict", "status": 200, "ms": 176.0}
+{"time": "2026-10-21T03:47:17.758+00:00", "severity": "INFO", "message": "request", "request_id": "e67041649311", "method": "POST", "path": "/predict", "status": 200, "ms": 164.6}
+{"time": "2026-10-21T03:47:17.942+00:00", "severity": "INFO", "message": "request", "request_id": "d2d41e7236a8", "method": "POST", "path": "/predict", "status": 200, "ms": 182.3}
+{"time": "2026-10-21T03:47:18.138+00:00", "severity": "INFO", "message": "request", "request_id": "34fc9b1d80e5", "method": "POST", "path": "/predict", "status": 200, "ms": 195.0}
+{"time": "2026-10-21T03:47:18.322+00:00", "severity": "INFO", "message": "request", "request_id": "e00125804c98", "method": "POST", "path": "/predict", "status": 200, "ms": 183.1}
+{"time": "2026-10-21T03:47:18.504+00:00", "severity": "INFO", "message": "request", "request_id": "d144e2db20fa", "method": "POST", "path": "/predict", "status": 200, "ms": 181.0}
+{"time": "2026-10-21T03:47:18.675+00:00", "severity": "INFO", "message": "request", "request_id": "3b2366f92a98", "method": "POST", "path": "/predict", "status": 200, "ms": 170.1}
+{"time": "2026-10-21T03:47:18.856+00:00", "severity": "INFO", "message": "request", "request_id": "f83e667cbe8d", "method": "POST", "path": "/predict", "status": 200, "ms": 180.0}
+{"time": "2026-10-21T03:47:19.036+00:00", "severity": "INFO", "message": "request", "request_id": "fad8d8fd6930", "method": "POST", "path": "/predict", "status": 200, "ms": 178.8}
+{"time": "2026-10-21T03:47:19.210+00:00", "severity": "INFO", "message": "request", "request_id": "b7a58843376e", "method": "POST", "path": "/predict", "status": 200, "ms": 173.8}
+{"time": "2026-10-21T03:47:19.382+00:00", "severity": "INFO", "message": "request", "request_id": "7cf5deecfa6d", "method": "POST", "path": "/predict", "status": 200, "ms": 170.8}
+{"time": "2026-10-21T03:47:19.557+00:00", "severity": "INFO", "message": "request", "request_id": "e9ee5020bcc5", "method": "POST", "path": "/predict", "status": 200, "ms": 174.1}
+{"time": "2026-10-21T03:47:19.736+00:00", "severity": "INFO", "message": "request", "request_id": "98e9986bc0c2", "method": "POST", "path": "/predict", "status": 200, "ms": 178.0}
+{"time": "2026-10-21T03:47:19.926+00:00", "severity": "INFO", "message": "request", "request_id": "36bd1a153a0a", "method": "POST", "path": "/predict", "status": 200, "ms": 189.1}
+{"time": "2026-10-21T03:47:20.100+00:00", "severity": "INFO", "message": "request", "request_id": "9ee28edcfa36", "method": "POST", "path": "/predict", "status": 200, "ms": 172.5}
+{"time": "2026-10-21T03:47:20.272+00:00", "severity": "INFO", "message": "request", "request_id": "3da4bd01b866", "method": "POST", "path": "/predict", "status": 200, "ms": 171.5}
+{"time": "2026-10-21T03:47:20.443+00:00", "severity": "INFO", "message": "request", "request_id": "8d633dec8d03", "method": "POST", "path": "/predict", "status": 200, "ms": 170.1}
+{"time": "2026-10-21T03:47:20.617+00:00", "severity": "INFO", "message": "request", "request_id": "96a19e414b89", "method": "POST", "path": "/predict", "status": 200, "ms": 173.0}
+{"time": "2026-10-21T03:47:20.792+00:00", "severity": "INFO", "message": "request", "request_id": "37787c2bc8f2", "method": "POST", "path": "/predict", "status": 200, "ms": 173.9}
+{"time": "2026-10-21T03:47:20.984+00:00", "severity": "INFO", "message": "request", "request_id": "273e11edc82a", "method": "POST", "path": "/predict", "status": 200, "ms": 191.5}
+{"time": "2026-10-21T03:47:21.158+00:00", "severity": "INFO", "message": "request", "request_id": "59b9e508a3f6", "method": "POST", "path": "/predict", "status": 200, "ms": 172.8}
+{"time": "2026-10-21T03:47:21.332+00:00", "severity": "INFO", "message": "request", "request_id": "3a2649529c40", "method": "POST", "path": "/predict", "status": 200, "ms": 173.2}
+{"time": "2026-10-21T03:47:21.505+00:00", "severity": "INFO", "message": "request", "request_id": "a02a152bb4b0", "method": "POST", "path": "/predict", "status": 200, "ms": 172.2}
+{"time": "2026-10-21T03:47:21.686+00:00", "severity": "INFO", "message": "request", "request_id": "3db9427b4d91", "method": "POST", "path": "/predict", "status": 200, "ms": 180.4}
+{"time": "2026-10-21T03:47:21.859+00:00", "severity": "INFO", "message": "request", "request_id": "1da4be93883f", "method": "POST", "path": "/predict", "status": 200, "ms": 172.2}
+{"time": "2026-10-21T03:47:22.033+00:00", "severity": "INFO", "message": "request", "request_id": "0e1006f52829", "method": "POST", "path": "/predict", "status": 200, "ms": 173.3}
+{"time": "2026-10-21T03:47:22.211+00:00", "severity": "INFO", "message": "request", "request_id": "8dd0dd7bd1f3", "method": "POST", "path": "/predict", "status": 200, "ms": 177.2}
+{"time": "2026-10-21T03:47:22.395+00:00", "severity": "INFO", "message": "request", "request_id": "d12ba89f2198", "method": "POST", "path": "/predict", "status": 200, "ms": 183.6}
+{"time": "2026-10-21T03:47:22.569+00:00", "severity": "INFO", "message": "request", "request_id": "5fd30fa9009e", "method": "POST", "path": "/predict", "status": 200, "ms": 173.3}
+{"time": "2026-10-21T03:47:22.742+00:00", "severity": "INFO", "message": "request", "request_id": "7222be8ac9ce", "method": "POST", "path": "/predict", "status": 200, "ms": 171.4}
+{"time": "2026-10-21T03:47:22.922+00:00", "severity": "INFO", "message": "request", "request_id": "5618f71636a0", "method": "POST", "path": "/predict", "status": 200, "ms": 179.5}
+{"time": "2026-10-21T03:47:23.910+00:00", "severity": "INFO", "message": "request", "request_id": "f98b853caff4", "method": "POST", "path": "/predict", "status": 200, "ms": 977.3}
+{"time": "2026-10-21T03:47:23.910+00:00", "severity": "INFO", "message": "request", "request_id": "9eb33b2abbb9", "method": "POST", "path": "/predict", "status": 200, "ms": 977.4}
+{"time": "2026-10-21T03:47:23.910+00:00", "severity": "INFO", "message": "request", "request_id": "64d77e2cdf17", "method": "POST", "path": "/predict", "status": 200, "ms": 977.2}
+{"time": "2026-10-21T03:47:23.910+00:00", "severity": "INFO", "message": "request", "request_id": "c484864a38b3", "method": "POST", "path": "/predict", "status": 200, "ms": 977.1}
+{"time": "2026-10-21T03:47:23.910+00:00", "severity": "INFO", "message": "request", "request_id": "db5b35d975a4", "method": "POST", "path": "/predict", "status": 200, "ms": 977.1}
+{"time": "2026-10-21T03:47:23.910+00:00", "severity": "INFO", "message": "request", "request_id": "1da6bb5e7470", "method": "POST", "path": "/predict", "status": 200, "ms": 977.1}
+{"time": "2026-10-21T03:47:23.910+00:00", "severity": "INFO", "message": "request", "request_id": "d07871af9945", "method": "POST", "path": "/predict", "status": 200, "ms": 977.0}
+{"time": "2026-10-21T03:47:23.910+00:00", "severity": "INFO", "message": "request", "request_id": "142d1e8c9069", "method": "POST", "path": "/predict", "status": 200, "ms": 977.0}
+{"time": "2026-10-21T03:47:24.888+00:00", "severity": "INFO", "message": "request", "request_id": "94434a56896a", "method": "POST", "path": "/predict", "status": 200, "ms": 974.4}
+{"time": "2026-10-21T03:47:24.888+00:00", "severity": "INFO", "message": "request", "request_id": "045361834232", "method": "POST", "path": "/predict", "status": 200, "ms": 974.4}
+{"time": "2026-10-21T03:47:24.888+00:00", "severity": "INFO", "message": "request", "request_id": "461c010a7a71", "method": "POST", "path": "/predict", "status": 200, "ms": 973.6}
+{"time": "2026-10-21T03:47:24.888+00:00", "severity": "INFO", "message": "request", "request_id": "aac9697ff479", "method": "POST", "path": "/predict", "status": 200, "ms": 973.0}
+{"time": "2026-10-21T03:47:24.888+00:00", "severity": "INFO", "message": "request", "request_id": "ab260f7ef116", "method": "POST", "path": "/predict", "status": 200, "ms": 972.5}
+{"time": "2026-10-21T03:47:24.888+00:00", "severity": "INFO", "message": "request", "request_id": "d658f86aa6b1", "method": "POST", "path": "/predict", "status": 200, "ms": 972.2}
+{"time": "2026-10-21T03:47:24.889+00:00", "severity": "INFO", "message": "request", "request_id": "d90897f78b49", "method": "POST", "path": "/predict", "status": 200, "ms": 971.9}
+{"time": "2026-10-21T03:47:24.889+00:00", "severity": "INFO", "message": "request", "request_id": "9323c0d2c569", "method": "POST", "path": "/predict", "status": 200, "ms": 971.8}
+{"time": "2026-10-21T03:47:25.914+00:00", "severity": "INFO", "message": "request", "request_id": "a46897146157", "method": "POST", "path": "/predict", "status": 200, "ms": 1021.5}
+{"time": "2026-10-21T03:47:25.914+00:00", "severity": "INFO", "message": "request", "request_id": "32cd75593e97", "method": "POST", "path": "/predict", "status": 200, "ms": 1020.7}
+{"time": "2026-10-21T03:47:25.914+00:00", "severity": "INFO", "message": "request", "request_id": "b9d1c742c991", "method": "POST", "path": "/predict", "status": 200, "ms": 1019.9}
+{"time": "2026-10-21T03:47:25.914+00:00", "severity": "INFO", "message": "request", "request_id": "17618fb11447", "method": "POST", "path": "/predict", "status": 200, "ms": 1019.3}
+{"time": "2026-10-21T03:47:25.914+00:00", "severity": "INFO", "message": "request", "request_id": "9e8179fa0610", "method": "POST", "path": "/predict", "status": 200, "ms": 1018.8}
+{"time": "2026-10-21T03:47:25.914+00:00", "severity": "INFO", "message": "request", "request_id": "fc6dec38ebe2", "method": "POST", "path": "/predict", "status": 200, "ms": 1018.4}
+{"time": "2026-10-21T03:47:25.914+00:00", "severity": "INFO", "message": "request", "request_id": "8fa948179eaf", "method": "POST", "path": "/predict", "status": 200, "ms": 1018.1}
+{"time": "2026-10-21T03:47:25.914+00:00", "severity": "INFO", "message": "request", "request_id": "db358db72138", "method": "POST", "path": "/predict", "status": 200, "ms": 1018.0}
+{"time": "2026-10-21T03:47:26.876+00:00", "severity": "INFO", "message": "request", "request_id": "f48f4566d0ef", "method": "POST", "path": "/predict", "status": 200, "ms": 958.4}
+{"time": "2026-10-21T03:47:26.876+00:00", "severity": "INFO", "message": "request", "request_id": "b63f35928478", "method": "POST", "path": "/predict", "status": 200, "ms": 958.1}
+{"time": "2026-10-21T03:47:26.877+00:00", "severity": "INFO", "message": "request", "request_id": "c6576a1b2f1d", "method": "POST", "path": "/predict", "status": 200, "ms": 957.2}
+{"time": "2026-10-21T03:47:26.877+00:00", "severity": "INFO", "message": "request", "request_id": "874107908b44", "method": "POST", "path": "/predict", "status": 200, "ms": 956.7}
+{"time": "2026-10-21T03:47:26.877+00:00", "severity": "INFO", "message": "request", "request_id": "48e189005a49", "method": "POST", "path": "/predict", "status": 200, "ms": 956.3}
+{"time": "2026-10-21T03:47:26.877+00:00", "severity": "INFO", "message": "request", "request_id": "007cbd83f256", "method": "POST", "path": "/predict", "status": 200, "ms": 955.9}
+{"time": "2026-10-21T03:47:26.877+00:00", "severity": "INFO", "message": "request", "request_id": "f526c8ce2ae2", "method": "POST", "path": "/predict", "status": 200, "ms": 955.5}
+{"time": "2026-10-21T03:47:26.877+00:00", "severity": "INFO", "message": "request", "request_id": "74609ed6612a", "method": "POST", "path": "/predict", "status": 200, "ms": 955.4}
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [22740]

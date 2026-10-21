@@ -1,0 +1,28 @@
+sreemanti@MacBook-Pro deploy-ai-app % docker run --rm -e DTYPE=bfloat16 -v ./model:/models/issue-triage:ro -v ./scripts:/srv/scripts:ro -v ./data:/srv/data:ro deploy-ai-app:local python -m scripts.try_model
+loaded on cpu in 1.0 s
+1 issue : 8220 ms  -> bug (0.82)  title: Corrupt PNG image in request returns HTTP 500 "broken PNG fi
+8 issues: 68985 ms in one batch = 8623 ms per issue
+  bug             0.82  (true: bug            ) Corrupt PNG image in request returns HTTP 500 "broken P
+  bug             0.85  (true: bug            ) Olmo-Hybrid-7B fails to load with default settings — GD
+  feature request 0.59  (true: feature request) Release all releasable GPU memory in sleep mode (tracki
+  usage           0.85  (true: usage          ) How does the Prefill node look up the Prefix Cache unde
+  installation    0.50  (true: installation   ) RuntimeError: FlashInfer requires GPUs with sm75 or hig
+  performance     0.97  (true: performance    ) DeepSeek-V4.1-Flash performance on ROCm
+  new model       0.95  (true: new model      ) Support for PaddleOCR-VL
+  documentation   0.92  (true: documentation  ) Enabling VLLM Whitespace on small models
+sreemanti@MacBook-Pro deploy-ai-app % docker run --rm -e DTYPE=float16 -v ./model:/models/issue-triage:ro -v ./scripts:/srv/scripts:ro -v ./data:/srv/data:ro deploy-ai-app:local python -m scripts.try_model
+loaded on cpu in 3.1 s
+1 issue : 1903 ms  -> bug (0.82)  title: Corrupt PNG image in request returns HTTP 500 "broken PNG fi
+8 issues: 13169 ms in one batch = 1646 ms per issue
+  bug             0.82  (true: bug            ) Corrupt PNG image in request returns HTTP 500 "broken P
+  bug             0.84  (true: bug            ) Olmo-Hybrid-7B fails to load with default settings — GD
+  feature request 0.58  (true: feature request) Release all releasable GPU memory in sleep mode (tracki
+  usage           0.85  (true: usage          ) How does the Prefill node look up the Prefix Cache unde
+  installation    0.51  (true: installation   ) RuntimeError: FlashInfer requires GPUs with sm75 or hig
+  performance     0.97  (true: performance    ) DeepSeek-V4.1-Flash performance on ROCm
+  new model       0.96  (true: new model      ) Support for PaddleOCR-VL
+  documentation   0.91  (true: documentation  ) Enabling VLLM Whitespace on small models
+sreemanti@MacBook-Pro deploy-ai-app % docker run --name f32 -e DTYPE=float32 -v ./model:/models/issue-triage:ro -v ./scripts:/srv/scripts:ro -v ./data:/srv/data:ro deploy-ai-app:local python -m scripts.try_model
+loaded on cpu in 3.3 s
+sreemanti@MacBook-Pro deploy-ai-app % docker inspect f32 --format exit={{.State.ExitCode}} oom-killed={{.State.OOMKilled}}
+exit=137 oom-killed=true

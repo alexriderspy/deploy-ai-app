@@ -1,0 +1,8 @@
+sreemanti@MacBook-Pro deploy-ai-app % docker compose up -d
+ Container deploy-ai-app-api-1  Recreate
+ Container deploy-ai-app-api-1  Recreated
+ Container deploy-ai-app-prometheus-1  Running
+ Container deploy-ai-app-api-1  Starting
+ Container deploy-ai-app-api-1  Started
+ Container deploy-ai-app-api-1  Waiting
+ Container deploy-ai-app-api-1  Healthy

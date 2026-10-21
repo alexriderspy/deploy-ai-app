@@ -1,0 +1,4 @@
+sreemanti@MacBook-Pro deploy-ai-app % python scripts/merge_adapter.py ../../finetune-llama/project/issue-triage-lora model
+W1021 07:45:30.783000 88572 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+base model: unsloth/Llama-3.2-1B-Instruct
+merged ../../finetune-llama/project/issue-triage-lora -> model  (2.47 GB of weights)

@@ -1,0 +1,13 @@
+sreemanti@MacBook-Pro deploy-ai-app % curl -s localhost:54588/health
+{"status":"ok","model_version":"issue-triage-llama-3.2-1b-v1","device":"mps"}
+sreemanti@MacBook-Pro deploy-ai-app % curl -s -H X-API-Key:local-demo-key --json @data/example_issue.json localhost:54588/predict
+{"label":"performance","confidence":0.38,"latency_ms":642.4,"model_version":"issue-triage-llama-3.2-1b-v1"}
+sreemanti@MacBook-Pro deploy-ai-app % curl -s -i -H X-API-Key:local-demo-key --json @data/example_issue.json localhost:54588/predict
+HTTP/1.1 200 OK
+date: Wed, 21 Oct 2026 03:47:16 GMT
+server: uvicorn
+content-length: 107
+content-type: application/json
+x-request-id: ec105fc9a50e
+
+{"label":"performance","confidence":0.38,"latency_ms":148.7,"model_version":"issue-triage-llama-3.2-1b-v1"}

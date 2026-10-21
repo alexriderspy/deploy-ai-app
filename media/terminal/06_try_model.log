@@ -1,0 +1,13 @@
+sreemanti@MacBook-Pro deploy-ai-app % python -m scripts.try_model
+W1021 07:47:50.230000 90952 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+loaded on mps in 3.6 s
+1 issue : 269 ms  -> bug (0.82)  title: Corrupt PNG image in request returns HTTP 500 "broken PNG fi
+8 issues: 1352 ms in one batch = 169 ms per issue
+  bug             0.83  (true: bug            ) Corrupt PNG image in request returns HTTP 500 "broken P
+  bug             0.85  (true: bug            ) Olmo-Hybrid-7B fails to load with default settings — GD
+  feature request 0.59  (true: feature request) Release all releasable GPU memory in sleep mode (tracki
+  usage           0.84  (true: usage          ) How does the Prefill node look up the Prefix Cache unde
+  installation    0.51  (true: installation   ) RuntimeError: FlashInfer requires GPUs with sm75 or hig
+  performance     0.98  (true: performance    ) DeepSeek-V4.1-Flash performance on ROCm
+  new model       0.95  (true: new model      ) Support for PaddleOCR-VL
+  documentation   0.91  (true: documentation  ) Enabling VLLM Whitespace on small models

@@ -1,5 +1,7 @@
 """Prometheus metrics: counters only go up, histograms count how many values fell into each bucket."""
-from prometheus_client import Counter, Histogram
+from prometheus_client import Counter, Histogram, disable_created_metrics
+
+disable_created_metrics()          # skip the extra "_created" timestamp series
 
 REQUESTS = Counter("triage_requests_total", "Requests to /predict, by outcome", ["status"])
 LATENCY = Histogram("triage_request_seconds", "Time to answer a /predict request",

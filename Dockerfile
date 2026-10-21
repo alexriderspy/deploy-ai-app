@@ -8,8 +8,7 @@ RUN pip install torch==2.14.1 --index-url https://download.pytorch.org/whl/cpu
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 # C++ headers are only needed to compile extensions; deleting them here really shrinks the image
-RUN rm -rf /opt/venv/lib/python3.12/site-packages/torch/include \
-    && find /opt/venv -name "__pycache__" -prune -exec rm -rf {} +
+RUN rm -rf /opt/venv/lib/python3.12/site-packages/torch/include
 
 # ---------- stage 2: the image we ship ----------
 FROM python:3.12-slim

@@ -45,6 +45,9 @@ API_KEY=... python scripts/eval_service.py
 ```
 
 The weights (`model/`, 2.5 GB) are mounted into the container, not baked into the image, and are not in git.
+Inside Docker on an ARM Mac (CPU only) float16 was 4.3x faster than bfloat16 and float32 did not fit in a 6 GB VM,
+so compose sets `DTYPE=float16`; the Cloud Run script uses float32 on x86. Measure on your own hardware with
+`python -m scripts.try_model`.
 
 ## CI and cloud
 - `.github/workflows/ci.yml`: every push runs pytest; on `main` it then builds a linux/amd64 image and pushes it to

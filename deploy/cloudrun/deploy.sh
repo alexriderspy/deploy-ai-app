@@ -4,7 +4,7 @@
 set -euo pipefail
 
 PROJECT_ID=${PROJECT_ID:?set PROJECT_ID}
-REGION=${REGION:-us-central1}
+REGION=${REGION:-asia-south1}            # Mumbai
 GITHUB_USER=${GITHUB_USER:-alexriderspy}
 TAG=${TAG:-latest}
 BUCKET=gs://$PROJECT_ID-models
@@ -37,7 +37,7 @@ gcloud storage buckets add-iam-policy-binding "$BUCKET" \
 gcloud secrets add-iam-policy-binding triage-api-keys --project "$PROJECT_ID" \
   --member "serviceAccount:$SA" --role roles/secretmanager.secretAccessor
 
-# 6. deploy: 4 CPUs, 8 GiB, up to 8 requests per instance, scale from 0 to 3 instances
+# 6. deploy: 4 CPUs, 8 GiB (float32 weights are 5 GB), up to 8 requests per instance, 0 to 3 instances
 gcloud run deploy issue-triage --project "$PROJECT_ID" --region "$REGION" \
   --image "$REGION-docker.pkg.dev/$PROJECT_ID/ghcr/$GITHUB_USER/deploy-ai-app:$TAG" \
   --service-account "$SA" \
@@ -45,7 +45,7 @@ gcloud run deploy issue-triage --project "$PROJECT_ID" --region "$REGION" \
   --timeout 60 --cpu-boost --execution-environment gen2 \
   --add-volume name=models,type=cloud-storage,bucket="$PROJECT_ID-models",readonly=true \
   --add-volume-mount volume=models,mount-path=/models \
-  --set-env-vars WEIGHTS_DIR=/models/issue-triage,MAX_BATCH_SIZE=8,OMP_NUM_THREADS=4 \
+  --set-env-vars WEIGHTS_DIR=/models/issue-triage,DTYPE=float32,MAX_BATCH_SIZE=8,OMP_NUM_THREADS=4 \
   --set-secrets API_KEYS=triage-api-keys:latest \
   --allow-unauthenticated
 

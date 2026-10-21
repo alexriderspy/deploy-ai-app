@@ -1,0 +1,3 @@
+sreemanti@MacBook-Pro deploy-ai-app % python scripts/eval_service.py http://localhost:57548
+accuracy through the API: 196/280 = 70.0%
+predicted labels: {'usage': 56, 'bug': 48, 'new model': 40, 'feature request': 40, 'performance': 37, 'installation': 32, 'documentation': 27}

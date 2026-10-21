@@ -1,0 +1,23 @@
+sreemanti@MacBook-Pro deploy-ai-app % docker compose up -d
+ Network deploy-ai-app_default  Creating
+ Network deploy-ai-app_default  Created
+ Container deploy-ai-app-api-1  Creating
+ Container deploy-ai-app-api-1  Created
+ Container deploy-ai-app-prometheus-1  Creating
+ Container deploy-ai-app-prometheus-1  Created
+ Container deploy-ai-app-api-1  Starting
+ Container deploy-ai-app-api-1  Started
+ Container deploy-ai-app-api-1  Waiting
+ Container deploy-ai-app-api-1  Healthy
+ Container deploy-ai-app-prometheus-1  Starting
+ Container deploy-ai-app-prometheus-1  Started
+sreemanti@MacBook-Pro deploy-ai-app % docker compose ps
+NAME                         IMAGE                    COMMAND                  SERVICE      CREATED          STATUS                    PORTS
+deploy-ai-app-api-1          deploy-ai-app:local      "sh -c 'exec uvicorn…"   api          11 seconds ago   Up 10 seconds (healthy)   0.0.0.0:57548->8080/tcp, [::]:57548->8080/tcp
+deploy-ai-app-prometheus-1   prom/prometheus:v3.5.0   "/bin/prometheus --c…"   prometheus   11 seconds ago   Up Less than a second     0.0.0.0:57551->9090/tcp, [::]:57551->9090/tcp
+sreemanti@MacBook-Pro deploy-ai-app % docker compose logs api
+api-1  | INFO:     Started server process [1]
+api-1  | INFO:     Waiting for application startup.
+api-1  | {"time": "2026-10-21T03:29:05.987+00:00", "severity": "INFO", "message": "model loaded", "seconds": 5.4, "device": "cpu", "max_batch_size": 8, "auth": true}
+api-1  | INFO:     Application startup complete.
+api-1  | INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)

@@ -1,0 +1,2 @@
+{"title": "Engine crashes with CUDA out of memory when loading Qwen3-32B with tensor parallel 4",
+ "body": "Starting vllm serve with --tensor-parallel-size 4 on 4x A100 40GB fails during model loading with torch.OutOfMemoryError. The same command worked on v0.11. Is this a regression?"}

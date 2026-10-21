@@ -1,0 +1,53 @@
+sreemanti@MacBook-Pro deploy-ai-app % curl -s localhost:54588/metrics
+# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 10645.0
+python_gc_objects_collected_total{generation="1"} 1518.0
+python_gc_objects_collected_total{generation="2"} 361.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 948.0
+python_gc_collections_total{generation="1"} 86.0
+python_gc_collections_total{generation="2"} 7.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="12",patchlevel="7",version="3.12.7"} 1.0
+# HELP triage_requests_total Requests to /predict, by outcome
+# TYPE triage_requests_total counter
+triage_requests_total{status="ok"} 66.0
+# HELP triage_request_seconds Time to answer a /predict request
+# TYPE triage_request_seconds histogram
+triage_request_seconds_bucket{le="0.1"} 0.0
+triage_request_seconds_bucket{le="0.25"} 33.0
+triage_request_seconds_bucket{le="0.5"} 33.0
+triage_request_seconds_bucket{le="1.0"} 58.0
+triage_request_seconds_bucket{le="2.0"} 66.0
+triage_request_seconds_bucket{le="4.0"} 66.0
+triage_request_seconds_bucket{le="8.0"} 66.0
+triage_request_seconds_bucket{le="16.0"} 66.0
+triage_request_seconds_bucket{le="32.0"} 66.0
+triage_request_seconds_bucket{le="+Inf"} 66.0
+triage_request_seconds_count 66.0
+triage_request_seconds_sum 37.8085898339923
+# HELP triage_batch_size Issues per model call
+# TYPE triage_batch_size histogram
+triage_batch_size_bucket{le="1.0"} 34.0
+triage_batch_size_bucket{le="2.0"} 34.0
+triage_batch_size_bucket{le="4.0"} 34.0
+triage_batch_size_bucket{le="8.0"} 38.0
+triage_batch_size_bucket{le="16.0"} 38.0
+triage_batch_size_bucket{le="32.0"} 38.0
+triage_batch_size_bucket{le="+Inf"} 38.0
+triage_batch_size_count 38.0
+triage_batch_size_sum 66.0
+# HELP triage_predictions_total Labels we predicted
+# TYPE triage_predictions_total counter
+triage_predictions_total{label="performance"} 2.0
+triage_predictions_total{label="bug"} 54.0
+triage_predictions_total{label="usage"} 8.0
+triage_predictions_total{label="installation"} 2.0

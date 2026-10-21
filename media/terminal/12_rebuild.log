@@ -1,0 +1,60 @@
+sreemanti@MacBook-Pro deploy-ai-app % docker build -t deploy-ai-app:local .
+#0 building with "colima-deploy" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.32kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 1.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 148B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 386B done
+#4 DONE 0.0s
+
+#5 [builder 1/6] FROM docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+#5 resolve docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1 done
+#5 DONE 0.0s
+
+#6 [stage-1 2/5] RUN useradd --create-home --uid 10001 app
+#6 CACHED
+
+#7 [builder 2/6] RUN python -m venv /opt/venv
+#7 CACHED
+
+#8 [builder 4/6] COPY requirements.txt .
+#8 CACHED
+
+#9 [builder 6/6] RUN rm -rf /opt/venv/lib/python3.12/site-packages/torch/include
+#9 CACHED
+
+#10 [stage-1 3/5] COPY --from=builder /opt/venv /opt/venv
+#10 CACHED
+
+#11 [builder 5/6] RUN pip install -r requirements.txt
+#11 CACHED
+
+#12 [stage-1 4/5] WORKDIR /srv
+#12 CACHED
+
+#13 [builder 3/6] RUN pip install torch==2.14.1 --index-url https://download.pytorch.org/whl/cpu
+#13 CACHED
+
+#14 [stage-1 5/5] COPY app ./app
+#14 CACHED
+
+#15 exporting to image
+#15 exporting layers done
+#15 exporting manifest sha256:e2aa53c5686713cbeeb27e3e9bb0a37e04c9e045c48b964ad7644ec4188d99ef done
+#15 exporting config sha256:f2109d3752e3a1d86eaa13469aade2eb7507e7d324ffce4fbb790809469b7df0 done
+#15 exporting attestation manifest sha256:d116b8cf68d0a1936673cf76edc63f8a96dac93e2db7da4fc7045da26818b0e3 done
+#15 exporting manifest list sha256:2e5a94882bbd5bb88a55add8dd681851ba7dd234d48e5d77fcb429307f4cc8e4 done
+#15 naming to docker.io/library/deploy-ai-app:local done
+#15 unpacking to docker.io/library/deploy-ai-app:local done
+#15 DONE 0.0s
+
+View build details: docker-desktop://dashboard/build/colima-deploy/colima-deploy/jz2giyzcf7b092m641o3c3f3i

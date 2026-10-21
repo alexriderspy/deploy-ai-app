@@ -5,6 +5,7 @@ import json
 import os
 import statistics
 import time
+from collections import Counter
 
 import httpx
 
@@ -13,16 +14,15 @@ async def main(url: str, n: int, concurrency: int) -> None:
     issues = [json.loads(line) for line in open("data/test_issues.jsonl")]
     headers = {"X-API-Key": os.environ.get("API_KEY", "")}
     gate = asyncio.Semaphore(concurrency)
-    latencies, errors = [], 0
+    latencies, statuses = [], Counter()
 
     async def one(client: httpx.AsyncClient, i: int) -> None:
-        nonlocal errors
         issue = issues[i % len(issues)]
         async with gate:
             started = time.perf_counter()
             r = await client.post(f"{url}/predict", json={"title": issue["title"], "body": issue["body"]})
             latencies.append(time.perf_counter() - started)
-            errors += r.status_code != 200
+            statuses[r.status_code] += 1
 
     async with httpx.AsyncClient(headers=headers, timeout=120) as client:
         started = time.perf_counter()
@@ -30,8 +30,9 @@ async def main(url: str, n: int, concurrency: int) -> None:
         wall = time.perf_counter() - started
 
     p = statistics.quantiles(latencies, n=100)
-    print(f"concurrency {concurrency:>2} | {n} requests, {errors} errors | {n / wall:5.2f} req/s | "
-          f"p50 {p[49] * 1000:5.0f} ms  p95 {p[94] * 1000:5.0f} ms  max {max(latencies) * 1000:5.0f} ms")
+    codes = " ".join(f"{code}x{count}" for code, count in sorted(statuses.items()))
+    print(f"concurrency {concurrency:>2} | {n} requests: {codes} | {statuses[200] / wall:5.2f} ok/s | "
+          f"p50 {p[49] * 1000:6.0f} ms  p95 {p[94] * 1000:6.0f} ms  max {max(latencies) * 1000:6.0f} ms")
 
 
 if __name__ == "__main__":
